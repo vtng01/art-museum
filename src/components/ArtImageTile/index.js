@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 
 export default function ArtImageTile({ art, galleryId }) {
   return (
