@@ -21,7 +21,7 @@ export default function GalleryNavigation({ galleries }) {
 
         <ul>
           <li>
-            <NavLink to="search-page">Search</NavLink>
+            <NavLink to="/search-page">Search</NavLink>
           </li>
         </ul>
         {/* {galleries.map((gallery, i) => {

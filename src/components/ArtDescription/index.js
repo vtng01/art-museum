@@ -21,7 +21,13 @@ export default function ArtDescription({ gallery }) {
       <p>Credit: {credit}</p>
       <p>Technique: {technique}</p>
       {art.images.map((img, i) => {
-        return <img src={img.baseimageurl} key={img.imageid}></img>;
+        return (
+          <img
+            src={img.baseimageurl}
+            key={img.imageid}
+            className="art-img"
+          ></img>
+        );
       })}
     </section>
   );
