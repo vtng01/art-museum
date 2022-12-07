@@ -4,17 +4,16 @@ import harvardArt from "./data/harvardArt";
 import GalleryNavigation from "./components/GalleryNavigation";
 import GalleryView from "./components/GalleryView";
 import { Route, Switch } from "react-router-dom";
+import GalleryPreview from "./components/GalleryPreview";
 
 function App() {
   return (
     <section className="page-wrapper">
       <GalleryNavigation galleries={harvardArt.records} />
+
       <Switch>
         <Route path="/" exact>
-          <h2>Harvard Art Museum</h2>
-          <p>
-            Please select the Gallery you wish you see on the navigation bar
-          </p>
+          <GalleryPreview galleries={harvardArt.records} />
         </Route>
         <Route path="/galleries/:galleryId">
           <GalleryView galleries={harvardArt.records} />
