@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import "./ArtDescription.css";
 
 export default function ArtDescription({ gallery }) {
   const { galleryId, artId } = useParams();

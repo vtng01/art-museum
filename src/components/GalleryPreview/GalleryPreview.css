@@ -6,8 +6,8 @@
 }
 
 .swiper-slide {
-  text-align: center;
   display: flex;
+  justify-content: center;
 }
 
 .swiper-slide img {

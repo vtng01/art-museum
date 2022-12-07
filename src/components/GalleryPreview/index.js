@@ -38,22 +38,19 @@ export default function GalleryPreview({ galleries }) {
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
+        slidesPerGroup={3}
         loop={true}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Navigation]}
+        modules={[Pagination, Navigation]}
         className="mySwiper"
       >
         {gallery?.objects.map((art, i) => {
           return (
-            <SwiperSlide>
-              <ArtImageTile
-                art={art}
-                key={art.id}
-                galleryId={gallery?.galleryid}
-              />
+            <SwiperSlide key={art.id}>
+              <ArtImageTile art={art} galleryId={gallery?.galleryid} />
             </SwiperSlide>
           );
         })}
